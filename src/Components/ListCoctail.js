@@ -10,7 +10,7 @@ function ListCoctail() {
   console.log(cocktailList)
 
 
-  React.useEffect( () => {
+  useEffect( () => {
       FetchData()
   },[]);
 
