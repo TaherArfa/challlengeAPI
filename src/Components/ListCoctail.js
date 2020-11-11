@@ -27,7 +27,7 @@ function ListCoctail() {
     if (!_.isEmpty(cocktailList.data)) {
       return cocktailList.data.map(el => {
         // return <p>  </p>;
-        return <div className="cocktailList">deq
+        return <div className="cocktailList">
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src={el.strDrinkThumb} />
               <Card.Body>
