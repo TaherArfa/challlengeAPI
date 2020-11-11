@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import { useEffect } from "react";
 import { GetCocktailList } from "../Actions/actionTask";
+import { Card,  Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 function ListCoctail() {
   const dispatch = useDispatch();
@@ -10,7 +13,9 @@ function ListCoctail() {
   console.log(cocktailList)
 
 
-  useEffect( () => {
+
+ useEffect( () => {
+
       FetchData()
   },[]);
 
@@ -20,7 +25,25 @@ function ListCoctail() {
 
   const showData = () => {
     if (!_.isEmpty(cocktailList.data)) {
-      return <p> have data </p>;
+      return cocktailList.data.map(el => {
+        // return <p>  </p>;
+        return <div className="cocktailList">deq
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={el.strDrinkThumb} />
+              <Card.Body>
+                <Card.Title>{el.strDrink}</Card.Title>
+                <Card.Text>
+                 {el.strInstructions}
+                </Card.Text>
+                <Button variant="primary"><Link to={`/cocktail/${el.idDrink}`} className="cocktailLink">About Cocktail</Link></Button>
+              </Card.Body>
+            </Card>
+        </div>
+
+
+
+      })
+     
     }
 
     if (cocktailList.loading) {
@@ -35,7 +58,7 @@ function ListCoctail() {
   };
 
   return (
-    <div>
+    <div className="listCocktail">
       {/* <h1> listCoctail </h1> */}
       {showData()}
     </div>
