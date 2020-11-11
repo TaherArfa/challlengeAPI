@@ -13,7 +13,9 @@ function ListCoctail() {
   console.log(cocktailList)
 
 
+
  useEffect( () => {
+
       FetchData()
   },[]);
 
