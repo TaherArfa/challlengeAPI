@@ -27,7 +27,7 @@ export const reducerTask = (state = intialState, action) => {
         return {
          ...state,
          loading: false,
-         data : action.payload,
+         data : action.payload.drinks,
          errorMsg : "",
         };
          

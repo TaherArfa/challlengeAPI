@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.listCocktail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* height: 30%; */
+}
+
+p.card-text {
+  height: 130px;
+  -webkit-text-stroke-width: medium;
+    font-size: small;
+}
+
+
+.cocktailList {
+  margin-top: 3%;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+a.cocktailLink {
+  color: wheat;
+}
+
+
+
+/* .card {
+  height: 30% !important;
+} */
