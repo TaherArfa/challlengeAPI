@@ -13,7 +13,6 @@ function ListCoctail(props) {
   const cocktailList = useSelector((state) => state.CocktailList);
   console.log("ccccccc", cocktailList);
 
-
   useEffect(() => {
     FetchData();
   }, [search]);
@@ -26,11 +25,9 @@ function ListCoctail(props) {
     if (!_.isEmpty(cocktailList.data)) {
       return cocktailList.data.map((el) => {
         // return <p>  </p>;
-
         return (
           <div className="cocktailList">
             <Card style={{ width: "18rem" }}>
-
               <Card.Img variant="top" src={el.strDrinkThumb} />
               <Card.Body>
                 <Card.Title>{el.strDrink}</Card.Title>
@@ -60,16 +57,16 @@ function ListCoctail(props) {
       return <p> {cocktailList.errorMsg} </p>;
     }
 
-    return <p> unable to get data</p>;
+    return <div style={{
+      display: "flex",
+      FlexWrap:"wrap"
+  }}><h1> we can not find Your Cocktail</h1>;
+  </div>
   };
 
   return (
     <div className="listCocktail">
-      <div>
-        <p> Search </p>
-        <input type="text" onChange={(e) => setSearch(e.target.value)} />
-        {/* <button onClick={()=> props.history.push(`/cocktail/${search}`)}>search</button> */}
-      </div>
+   
       {showData()}
     </div>
   );
