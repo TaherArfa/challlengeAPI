@@ -61,7 +61,16 @@ a.cocktailLink {
   color: wheat;
 }
 
+.SpinnerLoading{
+  margin-top: 30  px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* .card {
   height: 30% !important;
