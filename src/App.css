@@ -86,3 +86,22 @@ a.cocktailLink {
   margin: 20px;
 
 }
+
+p.MuiTypography-root.MuiTypography-body1.MuiTypography-paragraph{
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.54) !important;
+    font-size: 0.875rem !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.43 !important;
+    letter-spacing: 0.01071em !important;
+}
+p.MuiTypography-root.MuiTypography-body2.MuiTypography-colorTextSecondary {
+  text-align: justify;
+}
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
+  margin-top: 36px;
+}
+/* a.navlink.nav-link{
+  color: black !important;
+} */
