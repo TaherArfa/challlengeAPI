@@ -32,8 +32,8 @@ export const GetCocktail = (idDrink) => async dispatch => {
         type: COCKTAIL_MULTIPULE_LOADING
     })
     try{
-        const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${idDrink}`)
-        dispatch({
+        const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`)   
+             dispatch({
             type: COCKTAIL_MULTIPULE_SUCCESS,
             payload : res.data,
             id : idDrink,

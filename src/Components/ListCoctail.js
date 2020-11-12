@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function ListCoctail() {
   const dispatch = useDispatch();
   const cocktailList = useSelector(state => state.CocktailList );
-  console.log(cocktailList)
+  console.log("listcoctail",cocktailList)
 
 
 
