@@ -8,18 +8,17 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function ListCoctail(props) {
-  
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const cocktailList = useSelector((state) => state.CocktailList);
-  console.log("ccccccc",cocktailList);
+  console.log("ccccccc", cocktailList);
 
   useEffect(() => {
     FetchData();
-  }, []);
+  }, [search]);
 
   const FetchData = () => {
-    dispatch(GetCocktailList());
+    dispatch(GetCocktailList(search));
   };
 
   const showData = () => {
@@ -63,15 +62,11 @@ function ListCoctail(props) {
 
   return (
     <div className="listCocktail">
-
-      {/* <div> 
-        
+      <div>
         <p> Search </p>
-        <input type="text" onChange={e => setSearch(e.target.value)}/>
-        <button onClick={()=> props.history.push(`/cocktail/${search}`)}>search</button>
-      
-      </div> */}
-      {/* <h1> listCoctail </h1> */}
+        <input type="text" onChange={(e) => setSearch(e.target.value)} />
+        {/* <button onClick={()=> props.history.push(`/cocktail/${search}`)}>search</button> */}
+      </div>
       {showData()}
     </div>
   );
