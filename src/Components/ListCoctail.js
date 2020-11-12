@@ -13,6 +13,7 @@ function ListCoctail(props) {
   const cocktailList = useSelector((state) => state.CocktailList);
   console.log("ccccccc", cocktailList);
 
+
   useEffect(() => {
     FetchData();
   }, [search]);
@@ -25,9 +26,11 @@ function ListCoctail(props) {
     if (!_.isEmpty(cocktailList.data)) {
       return cocktailList.data.map((el) => {
         // return <p>  </p>;
+
         return (
           <div className="cocktailList">
             <Card style={{ width: "18rem" }}>
+
               <Card.Img variant="top" src={el.strDrinkThumb} />
               <Card.Body>
                 <Card.Title>{el.strDrink}</Card.Title>
